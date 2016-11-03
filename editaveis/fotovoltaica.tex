@@ -81,11 +81,21 @@ Um módulo fotovoltaico é um conjunto de placas fotovoltaicas, ligadas em séri
 
 A ligação de módulo pode ser feita de duas formas, em série ou em paralelo. O arranjo em série consiste em agrupar o maior número de células possível até alcançar a tensão de 12V, a tensão final será a soma da tensão de cada uma das células. Esse arranjo é o mais comum em sistemas fotovoltaicos.
 
-% imagem aqui
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.5\textwidth]{figuras/associacao.png}
+\caption{Esquema de associação de células fotovoltaicas em série}
+\label{fig:associacao}
+\end{figure}
 
 Já o arranjo em paralelo fornece a corrente contínua final como a soma das correntes de cada placa e a tensão como a tensão de uma única placa. Esse arranjo é pouco utilizado já que a tensão fica em torno de 0,7V e a corrente máxima em 3A.
 
-% imagem aqui
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.5\textwidth]{figuras/associacaoserie.png}
+\caption{Esquema de associação de células fotovoltaicas em paralelo}
+\label{fig:associacaoparalelo}
+\end{figure}
 
 As estruturas de suporte são estruturas que suportam os módulos solares, eles podem ser fixos e sem angulação, voltados constantemente para cima. Podem ser móveis com angulação que é mudada manualmente de acordo com as condições anuais. E podem ser dispositivos tracker, estruturas automatizadas que mudam de angulação segundo a posição do sol durante os dias. 
 
@@ -136,34 +146,92 @@ Já em relação à configuração de um sistema fotovoltaico temos três tipos:
 	\item Sistema conectado à rede: Também chamado de On-Grid, o sistema é interligado à rede comum de distribuição de energia, assim não é necessário um sistema de armazenamento. Durante o período de pouca insolação ou durante à noite, a energia utilizada para abastecer o local passa a ser da rede comum. Já se a produção da energia solar excede à consumida, essa energia passa para a rede compartilhada e produz uma diminuição no consumo de energia. 
 \end{enumerate}
 
-%imagem
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.5\textwidth]{figuras/esquema.png}
+\caption{Esquema de energia híbrida (Fotovoltaiva e Eólica)}
+\label{fig:esquema}
+\end{figure}
 
-%imagem
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.5\textwidth]{figuras/ongrid.png}
+\caption{Representação esquemática do sistema On-Grid. Cores Fantasia.}
+\label{fig:ongrid}
+\end{figure}
 
 \section{Incidência solar na FGA}
 
 Além das condições atmosféricas, a disponibilidade de radiação solar, ou energia total incidente sobre a superfície terrestre, depende da latitude local e da posição no tempo (hora do dia e do ano). 
 
-Segundo dados do ATLAS de Irradiação Solar no Brasil, de 1998 (imagem abaixo), Brasília é uma região que recebe aproximadamente de 5700 a 5900 Wh por m² todos os dias , o que representa uma alta quantidade de energia solar recebida também na região onde se concentra a Faculdade UnB Gama. 
+Segundo dados do ATLAS de Irradiação Solar no Brasil, de 1998 mostrado na figura \ref{fig:atlas}, Brasília é uma região que recebe aproximadamente de 5700 a 5900 Wh por $m^{2}$ todos os dias, o que representa uma alta quantidade de energia solar recebida também na região onde se concentra a Faculdade UnB Gama. 
 
-%imagem
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.75\textwidth]{figuras/atlas.png}
+\caption{Fonte: \cite{colle1998atlas}}
+\label{fig:atlas}
+\end{figure}
 
 Outro dado importante diagnosticado pelo ATLAS Solarimétrico do Brasil, Brasília recebe em média anualmente 6 horas de insolação por dia. 
 
-Para tornar máximo o aproveitamento da radiação solar, o sistema solar fotovoltaico pode ser instalado com uma angulatura específica para a localidade, que depende da latitude do local e do período do ano que se deseja obter mais energia. Como poderemos ver no gráfico de irradiação solar da UNB campus Gama:
+Para tornar máximo o aproveitamento da radiação solar, o sistema solar fotovoltaico pode ser instalado com uma angulatura específica para a localidade, que depende da latitude do local e do período do ano que se deseja obter mais energia. Como podemos ver na figura \ref{fig:planoinclinado}, o gráfico de irradiação solar da UNB campus Gama:
 
-% imagem
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.75\textwidth]{figuras/planoinclinado.png}
+\caption{Gráfico de irradiação solar da UnB campus Gama}
+\label{fig:planoinclinado}
+\end{figure}
 
-Neste gráfico estão contido valores de radiação solar que será absorvido (KWh/m².dia) ao longo dos meses a partir do SunData do CRESESB, no qual já pode ser verificado a melhor angulação a serem colocadas as placas conforme a coordenada do campus. Verifica-se a partir deste gráfico que a angulação de 20º é a melhor, pois possui um delta total  (diferença da maior irradiação para a menor irradiação) e média anual de irradiação maior que as demais angulações. A aplicação que será feita está de forma detalhada no desenho.
+Neste gráfico estão contido valores de radiação solar que será absorvido (KWh/$m^{2}$ dia) ao longo dos meses a partir do SunData do CRESESB, no qual já pode ser verificado a melhor angulação a serem colocadas as placas conforme a coordenada do campus. Verifica-se a partir deste gráfico que a angulação de 20º é a melhor, pois possui um delta total  (diferença da maior irradiação para a menor irradiação) e média anual de irradiação maior que as demais angulações. A aplicação que será feita está de forma detalhada no desenho.
 
 \section{Manutenção das placas}
 
 A manutenção das placas se dará de forma simples e manual, visto que a poeira do local de instalação das placas é considerada bastante acentuada e que, se essa poeira revestir os painéis fotovoltaicos, o rendimento na geração de energia será muito baixo ou quase nenhum. Será necessária a limpeza manual. Essa limpeza acontecerá de acordo com a quantidade de poeira existente nas placas e a diminuição de rendimento. Ter-se-á todo controle de rendimento e quando este diminuir a limpeza será feita. Inicialmente, os funcionários da limpeza poderão lavar as placas com água e sabão neutro. Posteriormente, e se houver iniciativa de alunos e professores da área de energia, alunos participantes de projeto poderão fazer a limpeza das placas, visto que, de acordo com alguns estudantes, não se tem muita prática nas aulas de fontes de energia, além da facilidade de se fazer tal limpeza. Essa iniciativa poderia ajudar alunos que se interessam na área de energia fotovoltaica a medir eficiência na prática e ajudar na manutenção das placas.
 
-%imagem
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.75\textwidth]{figuras/fotovoltaica.png}
+\caption{Desenho esquemático da manutenção de placas fotovoltaicas}
+\label{fig:fotovoltaica}
+\end{figure}
 
 \section{Tipos de painéis solares fotovoltaicos}
 
 O painel solar é o componente principal de um sistema de geração de energia solar, formado por um conjunto de células fotovoltaicas que geram energia através da luz solar. Quando  as células são atingidas pelos raios solares, os elétrons se movimentam, gerando a corrente elétrica.
 
-A escolha do tipo e da quantidade de painéis adequados depende da demanda de uso e do local de instalação.  Dentre vários tipos existentes, foi escolhido três distintos, porém básicos, sendo eles:
+A escolha do tipo e da quantidade de painéis adequados depende da demanda de uso e do local de instalação. Dentre vários tipos existentes, foi escolhido três distintos, porém básicos, sendo eles: Monocristalino, Policristalino, silício amorfo (a-Si).
+
+\subsection{Painel Solar Monocristalino}
+
+É mais eficiente, produzido de células monocristalinas de silício. O silício deve ter elevada um alto grau de pureza para que torne o processo complexo para a produção de cristais únicos para cada célula. Tem uma eficiência média de 14\% - 21\%. Estão disponíveis nas cores: azul escuro ou quase preto (com anti reflexo), cinza ou azul acinzentada( sem anti reflexo). Possuem formato arredondado. E é mais caro que o policristalino Vida útil maior que 30 anos, e com garantia de fábrica de 25 anos. As vantagens do painel monocristalino é  que possui a eficiência mais alta dentre as tecnologias comercialmente viáveis atualmente, ocupam menor espaço. As desvantagens se dá por conta dos custos serem maiores e por desperdiçar uma certa quantia de silício na hora da produção.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.3\textwidth]{figuras/placa.png}
+\caption{Painel Solar Monocristalino}
+\label{fig:placa}
+\end{figure}
+
+\subsection{Painel Solar Policristalino}
+
+Menos eficiente que os monocristalinos, e são formadas por diversas células tornando-os diferente dos monocristalinos, dando uma aparência de vidro quebrado á célula. Tem eficiência média de 13\% - 16,5\%. Disponível na cor azul. Encontrado na forma quadrada. Vida útil de 30 anos e com garantia do fabricante de 25 anos. Vantagens se dá pelo fato da quantidade de resíduos de silício gerado ser menor que os monocristalinos, e por ter um custo menor. Desvantagens: Ser menos eficiente que os monocristalinos, e precisar de uma área maior para gerar a mesma quantidade de energia que os painéis monocristalinos.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.3\textwidth]{figuras/painel.png}
+\caption{Painel Solar Policristalino}
+\label{fig:painel}
+\end{figure}
+
+\subsection{Painel de silício amorfo (a-Si)}
+
+A produção de energia nessa tecnologia é baixa, as células solares de silício amorfo eram usadas para aplicações de pequenas escalas, tais como: calculadoras de bolso. Portanto, hoje já está sendo disponível para ser utilizada em larga escala.  Utiliza de uma técnica chamada de empilhamento, na qual várias camadas de células solares de silício amorfo são combinadas, resultando numa taxa de 6\% - 9\% de de eficiência. A vantagem é que são necessário apenas 1\% do silício utilizado em células solares de silício cristalino. Já a desvantagem é que a técnica do empilhamento tem custos elevados.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.3\textwidth]{figuras/marrom.png}
+\caption{Painel Solar silício amorfo}
+\label{fig:marrom}
+\end{figure}
