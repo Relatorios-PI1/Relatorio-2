@@ -2,7 +2,7 @@
 Descritas as ferramentas utilizadas em soluções Smart Grids, propõe-se a integração das fontes renováveis, a automação das redes e processos, comunicação, controle e sensoriamento a partir da comparação de sistemas, de modo com que haja interconexão entre as diferentes vertentes. Para tanto, a seguir serão comparadas características de operações, compatibilidade com o restante do projeto e adaptabilidade ao local de instalação (FGA).
 
 \subsection{Sensores de temperatura}
-A utilização dos sensores de temperatura será baseada no monitoramento de ambientes e para automação interna (acionamento de exaustores/ventiladores) e no monitoramento de sobreaquecimento de equipamentos e condutores. Dentre os sensores térmicos existentes, diferenciam-se no funcionamento os termistores, termopares, termorresistores, eletrônicos e pirômetros. Termistores são compostos por dispositivos que variam a resistência elétrica em função da temperatura, que pode ser inversamente proporcional a ela (NTC) ou diretamente proporcional (PTC). Termopares consistem de uma junção de dois materiais de condutividades elétricas distintas pela qual irá passar uma corrente que provocará uma queda de tensão proporcional à temperatura de sua superfície. PT RTD são sensores cuja variação na resistência se dá por meio da dilatação do material, que é proporcional ao aumento de temperatura. Termosensores de circuitos integrados constituem de sensores compostos por diversos componentes de modo que a sua saída não necessita de muitos hardwares para o condicionamento do sinal. (Thomazini e Braga, 4 ed).
+A utilização dos sensores de temperatura será baseada no monitoramento de ambientes e para automação interna (acionamento de exaustores/ventiladores) e no monitoramento de sobreaquecimento de equipamentos e condutores. Dentre os sensores térmicos existentes, diferenciam-se no funcionamento os termistores, termopares, termorresistores, eletrônicos e pirômetros. Termistores são compostos por dispositivos que variam a resistência elétrica em função da temperatura, que pode ser inversamente proporcional a ela (NTC) ou diretamente proporcional (PTC). Termopares consistem de uma junção de dois materiais de condutividades elétricas distintas pela qual irá passar uma corrente que provocará uma queda de tensão proporcional à temperatura de sua superfície. PT RTD são sensores cuja variação na resistência se dá por meio da dilatação do material, que é proporcional ao aumento de temperatura. Termosensores de circuitos integrados constituem de sensores compostos por diversos componentes de modo que a sua saída não necessita de muitos hardwares para o condicionamento do sinal \cite{thomazini2005sensores}.
 
 A tabela abaixo ilustra os diferentes tipos de sensores e suas características de funcionamento.
 
@@ -31,7 +31,7 @@ O sensor a ser utilizado no projeto será o modelo SLEP/ST-39, pois é o que uti
 \subsection{Sensores de comunicação}
 Sensores de comunicação infravermelho são componentes que se baseiam na emissão e recepção de ondas eletromagnéticas. No Conceito de Smart Grid, sensores infravermelhos e ultrassonoros podem ser utilizados como meios de transmissão de dados a distâncias curtas, porém sensores ultrassonoros possuem distâncias limitadas e são destinados apenas para aplicações de detecção de passagem. A transmissão de dados por meio de sensores infravermelhos se dá de forma serial e depende do protocolo de comunicação desses sensores com os respectivos emissores. 
 
-Dentre os sensores infravermelhos utilizados em comunicação e transmissão de dados, destacam-se os sensores PIN e os sensores AFD. Sensores PIN são sensores receptores fotossintéticos que tem a vantagem de se adaptar melhor às condições climáticas e ter uma vida útil maior, além de possuir um menor custo. Sensores AFD ou APD são sensores receptores fotossintéticos que fornecem uma melhor adaptação quanto ao ruído, mesmo que o seu custo de produção seja maior. (Maurício S, 2002).
+Dentre os sensores infravermelhos utilizados em comunicação e transmissão de dados, destacam-se os sensores PIN e os sensores AFD. Sensores PIN são sensores receptores fotossintéticos que tem a vantagem de se adaptar melhor às condições climáticas e ter uma vida útil maior, além de possuir um menor custo. Sensores AFD ou APD são sensores receptores fotossintéticos que fornecem uma melhor adaptação quanto ao ruído, mesmo que o seu custo de produção seja maior \cite{jose2002sistema}.
 
 Diferenças entre os fotodiodos PIN e AFD:
 \begin{figure}[!h]
@@ -43,7 +43,7 @@ Diferenças entre os fotodiodos PIN e AFD:
 
 Além das características técnicas referentes aos dois tipos de sensores presentes na Figura \ref{fig:sensorfotossintetico}, sensores APD possuem as desvantagens de  possuírem desempenho limitado por ruídos quânticos, a complexidade da estrutura, sensibilidade elevada quanto à variações de temperatura e uma menor fiabilidade.(ISCTE, Fotodetectores).
 
-Além de fotodetectores tais como PIN e APD, em uma comunicação de dados infravermelhos, necessitam-se de emissores de radiação infravermelha. Dentre os principais tipos de emissores infravermelhos, caracterizam-se os LEDs infravermelhos (Light Emitting Diodes) e LDs (Lases Diodes). (Maurício S, 2002).
+Além de fotodetectores tais como PIN e APD, em uma comunicação de dados infravermelhos, necessitam-se de emissores de radiação infravermelha. Dentre os principais tipos de emissores infravermelhos, caracterizam-se os LEDs infravermelhos (Light Emitting Diodes) e LDs (Lases Diodes) \cite{jose2002sistema}.
 
 As principais diferenças são expostas no quadro presente na Figura \ref{fig:sensorinfravermelho}.
 \begin{figure}[!h]
@@ -148,7 +148,7 @@ Portanto um modelo que serve como opção é o da marca Strazmaq, modelo QTASTZ-
 \end{figure}
 
 \subsection{Softwares de gerenciamento}
-A importância da informação para a tomada de decisões nas organizações tem impulsionado o desenvolvimento dos sistemas de processamento de informações. Algumas ferramentas importantes para esse processo são: processadores de texto (editoração eletrônica), planilhas (cálculos com tabelas de valores) e Sistemas de Gerenciamento de Bancos de Dados - SGBDs (armazenamento de grandes volumes de dados, estruturados em registros e tabelas, com recursos para acesso e processamento das informações) [Rocha, Dias, 2015].
+A importância da informação para a tomada de decisões nas organizações tem impulsionado o desenvolvimento dos sistemas de processamento de informações. Algumas ferramentas importantes para esse processo são: processadores de texto (editoração eletrônica), planilhas (cálculos com tabelas de valores) e Sistemas de Gerenciamento de Bancos de Dados - SGBDs (armazenamento de grandes volumes de dados, estruturados em registros e tabelas, com recursos para acesso e processamento das informações) \cite{rocha2015importancia}.
 
 Por definição, banco de dados é uma coleção de dados interrelacionados, representando informações sobre um domínio específico. Por exemplo: lista telefônica, controle do acervo de uma biblioteca, sistema de controle dos recursos humanos de uma empresa. 
 
