@@ -10,8 +10,68 @@ A compreensão do biogás como fonte renovável de energia traz como necessário
 
 \section {Funcionamento}
 A biomassa adotada neste estudo é a proveniente de resíduos orgânicos produzidos pelo restaurante universitário do Campus Faculdade do Gama, da Universidade de Brasília. O objetivo é a redução da dependência energética da concessionária de energia elétrica da região, o incentivo ao estudo e desenvolvimento de fontes renováveis de energia.
+
 Para este fim, administração do restaurante universitário da UnB, campus Gama, foi contatada para que se pudesse obter dados sobre a quantidade de dejetos orgânicos jogados fora. O controle documentado sobre essas informações não existe, porém de acordo com os dados fornecidos pela administração do restaurante pôde-se estimar a quantidade de resíduo orgânico produzido diariamente. A quantidade é de aproximadamente 240 kg de resíduo orgânico.
-\par O processo de conversão do biogás em energia elétrica é necessário ao entendimento do funcionamento deste projeto. Existem diversas tecnologias para efetuar a conversão energética do biogás. Entende-se por conversão energética o processo que transforma um tipo de energia em outro. No caso do biogás a energia química contida em suas moléculas é convertida em energia mecânica por um processo de combustão controlada. Essa energia mecânica aciona um gerador que a converte em energia elétrica.
+
+Para a definição da quantidade de energia a ser produzia a partir do biogás gerado, tem-se que primeiramente estimar a quantidade de biogás liberada na digestão anaeróbica dos resíduos orgânicos provenientes do Restaurante Universitário. O controle documentado dos resíduos é inexistente, e os dados obtidos na administração do restaurante permite estimar a quantidade de resíduo orgânico gerada diariamente.  São produzidos, em média, 4 sacos de lixo orgânico na unidade instalada na FGA, sendo que cada saco de lixo comporta 100 litros, e proporcionalmente 60 quilos de restos de alimentos.                        
+
+Ao inserir os resíduos orgânicos no sistema de biodigestores, existem 4 fatores que afetam, majoritariamente, na produção do biogás, o produto desejado:
+
+\begin{itemize}
+        \item Temperatura: As bactérias, que exercem o papel de decompor os alimentos, são sensíveis a altas temperaturas. Por isso a biomassa deve ficar em uma faixa de temperatura entre 25$^{\circ}$ e 35$^{\circ}$ C.
+        \item Quantidade de água: a proporção de água na mistura vai agir no tempo em que as bactérias anaeróbicas vão trabalhar e começar a liberar gases.
+        \item pH da Água: o pH da água tem uma grande importância para as condições ideais para que as bactérias não morram.
+        \item Presença de Oxigênio: Para que a digestão anaeróbica aconteça é imprescindível que a câmara de digestão seja totalmente lacrada, pois as bactérias que irão atuar na decomposição dos resíduos são do tipo anaeróbicos, ou seja, não necessitam de oxigênio para sobreviver usam a fermentação ou a quimiossíntese. Para isso a tubulação deve estar construída de forma que impeça a entrada de oxigênio no biodigestor na hora que o gás for ser liberado.
+\end{itemize}
+
+A visão do projeto é maximizar a economia da energia e gerar uma diminuição da conta de energia, as condições que afetam a produção do biogás serão consideradas ideais.
+
+Sabendo a quantidade de quilogramas (kg), pode-se estimar a quantidade de gás metano que será liberada no biodigestor.\newline
+
+\centerline{\textit{Dados coletados: 4 sacos de lixo de segunda a sexta, 2 sacos de lixo sábado}}
+\centerline{\textit{60 quilos * 4 sacos = 240 quilos de resíduos (segunda a sexta)}}
+\centerline{\textit{60 * 2 sacos = 120 quilos de resíduos (sábado)}}
+\centerline{\textit{Total de resíduos por semana (quilos) = 240 + 120 = 360 quilos}}
+\centerline{\textit{360 * 4 semanas = 1440 quilos/mês}}
+\centerline{\textit{1440 * 12 meses = 17280 quilos/ano}}
+
+
+Foi feita uma estimativa da quantidade de biogás a ser gerada por meio de um software de simulação chamado RETScreen. Esse software, cuja interface é mostrada nas figuras \ref{fig:ret1} e \ref{fig:ret2}, é aberto ao público e é disponibilizado online pelo governo do Canadá com o intuito de auxiliar na construção de usinas, mini-usinas e até instalações residenciais de fontes limpas de energia.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=0.75\paperwidth]{figuras/ret1.png}
+\caption{Interface do programa RETScreen Expert}
+\label{fig:ret1}
+\end{figure}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=0.75\paperwidth]{figuras/ret2.png}
+\caption{Cálculo da geração do biogás – RETScreen Expert}
+\label{fig:ret2}
+\end{figure}
+
+Nesta simulação, o aterro é o biodigestor na FGA. O ano de abertura considerado foi 2016, ano atual, considerando que o projeto está sendo realizado no mesmo. A estimativa de vida do biodigestor foi assumida como 10 anos. Tendo em vista a média de resíduo do ano presente, foi previsto que a cada ano que passa a tendência é que a quantidade do mesmo diminua devido a políticas de conscientização e um sentimento ecológico estar crescendo na sociedade.
+
+As variáveis constantes de produção de metano (k) e geração de metano a partir do lixo (L0), dependem diretamente dos 4 fatores que afetam a geração do biogás, mas podem ser retirados do estudo do Banco Central “Manual para a preparação de gás de aterro sanitário para projetos de energia na América Latina e Caribe” e dos dados ofertados ao público pelo órgão EPA dos EUA (Agencia de Proteção Ambiental). Os valores, conservadores, de k e L0 são respectivamente 0,05 e 400 $m^{3}$/t.
+
+Após serem inseridos os dados necessários, temos os resultados apresentados na figura \ref{fig:ret3}:
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\textwidth]{figuras/ret3.png}
+\caption{Resultados obtidos – RETScreen Expert}
+\label{fig:ret3}
+\end{figure}
+
+A produção teórica não considera eventuais perdas no sistema e mostra o que as fórmulas matemáticas indicam o que será gerado. Já a potencial considera as perdas e, provavelmente, chegará mais perto da realidade. O resultado indica a quantidade em $m^{3}$ de biogás que será gerado a cada tonelada de resíduo. Assim, para descobrir a quantidade disponível de gás no ano, multiplica-se pela quantidade total de resíduos, 17,82 toneladas:
+
+\[336 * 17,82 = 5980,8 m^{3}\]
+
+Desses 5980,8 $m^{3}$ de biogás terão 498,4 $m^{3}$ disponíveis para a utilização no motor gerados de ciclo Otto, por mês.
+
+O processo de conversão do biogás em energia elétrica é necessário ao entendimento do funcionamento deste projeto. Existem diversas tecnologias para efetuar a conversão energética do biogás. Entende-se por conversão energética o processo que transforma um tipo de energia em outro. No caso do biogás a energia química contida em suas moléculas é convertida em energia mecânica por um processo de combustão controlada. Essa energia mecânica aciona um gerador que a converte em energia elétrica.
 \par Após a conclusão da construção do biodigestor e do sistema de armazenamento de biogás, a matéria orgânica se decompõe e o biogás proveniente da decomposição é enviado através de uma tubulação para ser utilizado com combustível para o conjunto motor-gerador. O conjunto gerador consiste em um motor de combustão interna Ciclo Otto adaptada para o uso do biogás como combustível, acoplado a um gerador de eletricidade, gerando energia.
 \begin{enumerate}
         \item Entrada dos resíduos orgânicos:
